@@ -282,6 +282,24 @@ footer {
 a img:hover {
     color: #fff;
 }
+        
+        /* Diseño para tabletas */ 
+@media screen and (min-width: 500px) {
+	.fabricacion, .escolares {
+		float:left;
+		width:50%;
+	}
+}
+
+ /* Diseño para PC  */
+@media screen and (min-width: 1025px) {
+	.fabricacion, .escolares{
+	/* float: left; */
+	width:100%;
+    justify-content: center;
+    
+}
+} 
 
     </style>
     <title>Productos</title>
@@ -290,7 +308,7 @@ a img:hover {
 <body>
     <header>
         <div class="logo">
-            <a href="index.html"><img src="../media/imagenes/alasLogoBlanco.png" alt="logo"></a>
+            <a href="index.html"><img src="../media/img/alasLogoBlanco.png" alt="logo"></a>
         </div>
         <nav class="menu">
             <!-- para que una pagina se abra en otra pestaña se usa target="_blank" -->
