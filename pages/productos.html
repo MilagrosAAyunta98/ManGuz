@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://raw.github.com/daneden/animate.css/master/animate.css">
+    <meta name="description"
+        content="Este es el sitio web de mi tienda de calzado de cuero en el que encontrarás artículos, descripciones, imágenes entre otras cosas">
+    <meta name="keywords" content="CUERO, ZAPATILLAS, BOTINES, FUTBOL, SANDALIAS">
+    <meta name="keywords" content="botines de cuero, sandalias de cuero hombre">
+    <meta name="keyword" content="zapatillas de chicos de cuero">
+    <link rel="stylesheet" href="../CSS/productos.css">
+    <style>
+        @import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css');
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+            background-image: linear-gradient(to bottom, #000000, #3F80AA, #499AC9, #6DCDE5, #EDEEE4);
+        }
+
+        /* header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 30%;
+        }
+
+        .logo img {
+            width: 50%;
+            border: #EDEEE4;
+        }
+
+        /* menu */
+        .menu {
+            width: 50%;
+            height: 50%;
+
+        }
+
+        .menu ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .menu a {
+            display: block;
+            padding-top: 20px;
+            text-decoration: none;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            transition: all 0.7s ease;
+        }
+
+        .menu a:hover {
+            background-color: #E5E8E8;
+            color: #000000;
+            height: 50px;
+        }
+
+        .menu .subMenu {
+            background-color: rgb(154, 154, 250);
+            display: none;
+        }
+
+        .menu li:hover .subMenu {
+            display: block;
+
+        }
+
+        /* main */
+        h2 {
+            color: white;
+        }
+
+        p {
+            padding: 1em;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+        }
+
+        .productos h2 {
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        .productos .fabricacion {
+            width: 100%;
+            height: 600px;
+            background-color: rgb(10, 1, 1);
+            display: grid;
+        }
+
+        .fabricacion .img {
+            border: 2px solid #E5E8E8;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .productos .fabricacion {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .img1 {
+                grid-column: 1/2;
+                grid-row: 1/3;
+                background-image: url(../media/img/imgVertical1.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            .img1:hover {
+                transform: scale(1.2);
+            }
+
+            .img2 {
+                grid-column: 2/3;
+                grid-row: 1/2;
+                background-image: url(../media/img/productoSandaliasFranciscanas.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            .img2:hover {
+                animation-name: flash;
+                animation: 1s flash 1;
+            }
+
+            @keyframes flash {
+                50% {
+                    opacity: 1;
+                }
+
+                25%,
+                75% {
+                    opacity: 0;
+                }
+            }
+
+            .img3 {
+                grid-column: 3/4;
+                grid-row: 1/2;
+                background-image: url(../media/img/productoBotinesNegros.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            .img3:hover {
+                animation-name: vibrar;
+                animation: 1s vibrar infinite;
+            }
+
+            @keyframes vibrar {
+
+                5%,
+                25%,
+                45%,
+                65%,
+                85% {
+                    transform: translateX(-10px);
+                }
+
+                15%,
+                35%,
+                55%,
+                75%,
+                95% {
+                    transform: translateX(10px);
+                }
+            }
+
+            .img4 {
+                grid-column: 2/3;
+                grid-row: 2/3;
+                background-image: url(../media/img/productoBotinesBlanco.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            .img4:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        .img5 {
+            grid-column: 4/5;
+            grid-row: 1/3;
+            background-image: url(../media/img/imgVertical2.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img5:hover {
+            transform: scale(1.2);
+        }
+
+        .img6 {
+            grid-column: 3/4;
+            grid-row: 2/3;
+            background-image: url(../media/img/alasLogoBlanco.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img6:hover {
+            animation-name: flash;
+            animation: 1s flash 1;
+        }
+
+        @keyframes flash {
+            50% {
+                opacity: 1;
+            }
+
+            25%,
+            75% {
+                opacity: 0;
+            }
+        }
+
+        .titulo {
+            text-align: center;
+            padding: 0%;
+            margin: 2%;
+        }
+
+        .creacion .escolares {
+            width: 100%;
+            height: 600px;
+            background-color: rgb(10, 1, 1);
+            display: grid;
+        }
+
+        .escolares .img {
+            border: 2px solid #E5E8E8;
+        }
+
+        .img7 {
+            grid-column: 1/2;
+            grid-row: 1/4;
+            background-image: url(../media/img/VUELTA\ AL\ COLE.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img8 {
+            grid-column: 2/3;
+            grid-row: 1/4;
+            background-image: url(../media/img/zapas\ blancas\ 2.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* footer */
+
+footer {
+    background-color: #1A1A1A;
+    height: 50%;
+    color: white;
+    padding: 15px;
+}
+
+.main1 {
+    display: flex;
+    margin: 0 auto;
+}
+
+a img:hover {
+    color: #fff;
+}
+
+    </style>
+    <title>Productos</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="../media/imagenes/alasLogoBlanco.png" alt="logo"></a>
+        </div>
+        <nav class="menu">
+            <!-- para que una pagina se abra en otra pestaña se usa target="_blank" -->
+            <ul>
+                <li> <a href="../index.html"> Home </a></li>
+                <li> <a href="../index.html"> Quienes Somos </a></li>
+                <li> <a href="#"> Nuestros Productos </a></li>
+                <li> <a href="#sec3"> Contacto </a></li>
+            </ul>
+        </nav>
+        <title> Manguz Creciendo siempre al lado tuyu</title>
+    </header>
+    <main>
+        <br><br>
+        <section>
+
+            <section class="productos" id="productos">
+                <div data-aos="fade-down">
+                    <h2 class="wow animate__rubberBand">Nuestros Productos </h2>
+                    <p>Trabajamos con materia prima de la mejor calidad y cuero 100% vacuno, realizamos todo el proceso
+                        de diseño y confección cuidando todos los detalles para brindar un producto único e irrepetible.
+                    </p>
+                </div>
+                <div class="fabricacion">
+                    <div class="img img1"></div>
+                    <div class="img img2"></div>
+                    <div class="img img3"></div>
+                    <div class="img img4"></div>
+                    <div class="img img5"></div>
+                    <div class="img img6"></div>
+                </div>
+            </section>
+            <section class="creacion">
+                <div>
+                    <h2 class="titulo">Zapatillas Escolares</h2>
+                </div>
+                <div class="escolares">
+                    <div class="img img7"></div>
+                    <div class="img img8"></div>
+                </div>
+            </section>
+        <section>
+        </section>
+    </main>
+    <br><br>
+    <footer>
+        <div class="container" id="sec3">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 text-left">
+                    <h6 class="text-muted lead">CONTACTO:</h6>
+                    <h6 class="text-muted">
+                        Valparaiso 3586<br>
+                        Soldati, Capital Federal.<br>
+                        Teléfono: 1123874041<br>
+                    </h6>
+                </div>
+
+                <div class="col-xs-12 col-md-6 text-right">
+                    <h6 class="text-muted lead">ENCUENTRANOS EN LAS REDES</h6>
+                    <div class="redes-footer">
+                        <a href="https://bit.ly/3oEwvGh"><img src="../media/img/facebook blanco.png"></a>
+                        <a href="https://bit.ly/3HFieAF"><img src="../media/img/instagram blanco.png" ></a>
+                        <a href="https://bit.ly/3GDTzeg"><img src="../media/img/carrito-de-compras blanco.png"></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <form action="contact.php" method="post">
+            <div class="elemGroup">
+                <label for="name">Nombre y Apellido:</label>
+                <input type="text" id="name" name="visitor_name" placeholder="Nombre y Apellido"
+                    pattern=[A-Z\sa-z]{3,20} required>
+            </div>
+            <div class="elemGroup">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="visitor_email" placeholder="ejemplo@email.com" required>
+            </div>
+            <div class="elemGroup">
+            </div>
+            <div class="elemGroup">
+                <h4>Mensaje:</h4>
+                <textarea name="mensaje" id="title" cols="30" rows="10">
+                </textarea>
+            </div>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+        <div class="row">
+
+            <div class="col-md-12 text-right">
+                <p class="text-muted small">Milagros Ayunta @2022.<br> Todos los derechos reservados.
+                </p>
+            </div>
+
+        </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>
